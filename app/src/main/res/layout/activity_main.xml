@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleText"
+        android:text="@string/title_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:textSize="28dp"
+        android:textStyle="bold"/>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:layout_below="@+id/titleText"/>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="358dp"
+        android:layout_height="281dp"
+        android:layout_below="@+id/logo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="22dp"
+        android:background="#85000000"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/foodEdittext"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25dp"
+            android:capitalize="words"
+            android:hint="@string/hint_food"
+            android:padding="14dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/caloriesEdittext"
+            android:hint="@string/hint_calories"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:padding="14dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/submitButton"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/submit_text"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip this page"
+        android:textStyle="italic"
+        android:layout_below="@+id/layout"
+        android:layout_alignEnd="@+id/layout"/>
+
+
+</RelativeLayout>
